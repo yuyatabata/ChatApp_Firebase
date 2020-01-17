@@ -1,0 +1,63 @@
+<!-- index_chat.html -->
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Chatapp</title>
+    <style>
+        .name{
+            font-size: 10px;
+        }
+        .text{
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div>
+    <div>
+        <input type="text" id="username">
+    </div>
+    <div>
+        <textarea id="text" rows="5"></textarea>
+        <button id="send">send</button>
+    </div>
+    <div id="output"></div>
+</div>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "apiKey",
+    authDomain: "chatapp-351cd.firebaseapp.com",
+    databaseURL: "https://chatapp-351cd.firebaseio.com",
+    projectId: "chatapp-351cd",
+    storageBucket: "chatapp-351cd.appspot.com",
+    messagingSenderId: "262820390736",
+    appId: "1:262820390736:web:07f0a3df3be46ef2d0ee55",
+    measurementId: "G-J6TBPXGG2P"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
+  //Msg
+  const newPostRef = firebase.database();
+  let room = 'room1';
+
+  const send = document.getElementById("send");
+  const username = document.getElementById("username")
+</script>
+
+</body>
+
+</html>
